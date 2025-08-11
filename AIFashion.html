@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI時尚零售產業智慧應用人才培訓班</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #1a202c;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+             transform: scale(1.05);
+             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+        [data-aos="fade-up"] {
+            transform: translateY(20px);
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Hero Section -->
+    <header id="home" class="relative text-white">
+        <div class="hero-gradient">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4" data-aos="fade-up">
+                    🎯 AI時尚零售產業智慧應用人才培訓班
+                </h1>
+                <p class="text-xl md:text-2xl font-medium text-blue-200" data-aos="fade-up" data-aos-delay="200">
+                    💼 掌握AI數位轉型利器，提升職場核心價值
+                </p>
+                <a href="#register" class="mt-10 inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-100 transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+                    立即報名，開啟您的AI時尚職涯
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 課程特色與產業機遇 Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-aos="fade-up">🌟 課程特色與產業機遇</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    專為在職者設計，邀請具備國際品牌操盤與零售數據分析實務經驗的資深專家授課，協助您掌握AI數位轉型利器，全面提升職場價值與競爭力。
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center text-gray-700">
+                    <div class="p-6 bg-gray-100 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-5xl font-black text-blue-600 mb-2 counter" data-target="37">0</div>
+                        <p class="font-bold text-lg">生成式AI零售市場年複合成長率</p>
+                        <p class="text-sm text-gray-500">(2025-2034)</p>
+                    </div>
+                    <div class="p-6 bg-gray-100 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-5xl font-black text-blue-600 mb-2"><span class="counter" data-target="457">0</span>.<span class="counter" data-target="4" data-decimal="true">0</span>億</div>
+                        <p class="font-bold text-lg">全球零售業AI市場規模</p>
+                        <p class="text-sm text-gray-500">(2032年預計)</p>
+                    </div>
+                    <div class="p-6 bg-gray-100 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-5xl font-black text-blue-600 mb-2"><span class="counter" data-target="69">0</span>%</div>
+                        <p class="font-bold text-lg">零售商導入AI後營收增長</p>
+                        <p class="text-sm text-gray-500">(效益顯著)</p>
+                    </div>
+                    <div class="p-6 bg-gray-100 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="500">
+                        <div class="text-5xl font-black text-blue-600 mb-2"><span class="counter" data-target="50">0</span>%</div>
+                        <p class="font-bold text-lg">庫存預測精準度提升</p>
+                        <p class="text-sm text-gray-500">(最高可達)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 課程定位與目標 Section -->
+        <section id="objective" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-aos="fade-up">📋 課程定位與目標</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    專注培養「AI技術與時尚零售產業深度整合」的實務應用能力，透過精準預測、個人化體驗與營運效率提升三大核心優勢，在關鍵環節導入AI思維與技術。
+                </p>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-6">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-sm font-bold px-4 py-2 rounded-full">總訓練時數：42小時（7週）</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">🎯 學習成效</h3>
+                    <ul class="space-y-4 text-lg text-gray-600">
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✅</span><span>掌握時尚零售數位化基礎知識與最新趨勢</span></li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✅</span><span>學會Excel進階分析、Power BI視覺化應用</span></li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✅</span><span>熟練生成式AI工具在零售業務中的實務運用</span></li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✅</span><span>具備數據驅動的商品採購與行銷策略制定能力</span></li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✅</span><span>建立AI趨勢預測與顧客行為分析專業技能</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 適合參訓對象 Section -->
+        <section id="audience" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-aos="fade-up">👥 適合參訓對象</h2>
+                <div class="max-w-4xl mx-auto" id="audience-accordion" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Accordion Item 1 -->
+                    <div class="border-b">
+                        <button class="accordion-toggle w-full text-left py-4 px-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-800">🎯 時尚零售核心人員</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 text-gray-600">
+                            <p>商品企劃與採購：買手、商品經理、採購主管、供應鏈管理人員</p>
+                            <p>行銷與電商營運：數位行銷、社群經營、電商營運、品牌企劃人員</p>
+                            <p>門市與通路管理：店長、通路經理、營運督導、客服主管</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="border-b">
+                        <button class="accordion-toggle w-full text-left py-4 px-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-800">📊 數據與技術人員</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 text-gray-600">
+                            <p>數據分析師、商業分析師、市場研究人員</p>
+                            <p>IT系統管理、產品經理、數位轉型專員</p>
+                            <p>希望跨足時尚零售領域的技術背景人士</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="border-b">
+                        <button class="accordion-toggle w-full text-left py-4 px-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-800">👔 管理與決策人員</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </button>
+                        <div class="accordion-content px-6 pb-4 text-gray-600">
+                            <p>部門主管、營運總監、分店經理</p>
+                            <p>負責數位轉型規劃的中高階主管</p>
+                            <p>創業者或顧問服務提供者</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 課程大綱 Section -->
+        <section id="syllabus" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-aos="fade-up">📚 完整課程大綱</h2>
+                <div class="max-w-4xl mx-auto space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">1️⃣ 智慧時尚零售-趨勢探索 (7小時)</h3>
+                        <p class="text-gray-600">全球時尚趨勢與虛擬時尚技術應用、智慧製造流程與永續時裝設計實踐、案例剖析、文化價值與跨域職涯展望。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">2️⃣ 智慧時尚零售-採購管理 (8小時)</h3>
+                        <p class="text-gray-600">智慧供應鏈與數位採購實務（ERP/SCM）、快時尚即時採購與成本控管策略、永續採購流程優化與企業案例剖析。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">3️⃣ 智慧時尚零售-數據分析 (7小時)</h3>
+                        <p class="text-gray-600">時尚數據概念與處理流程實務解析、數據視覺化與市場細分分析（Excel/Power BI）、AI預測模型與社群KOL行為追蹤。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">4️⃣ 智慧時尚零售-行銷實務 (8小時)</h3>
+                        <p class="text-gray-600">數位品牌定位與故事行銷實務導入、社群媒體運營與KOL合作企劃實務、電商操作與O2O整合行銷規劃演練。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">5️⃣ 生成式AI技術與應用 (12小時)</h3>
+                        <p class="text-gray-600">生成式AI主流工具與應用實務演練、AI提示工程技術在行政文書與數據分析實作演練、檢索增強生成（RAG）與機器流程自動化（RPA）實務演練。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 專業證照加值 & 學習效益 Section -->
+        <section id="benefits" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-5 gap-12 items-start">
+                    <!-- 專業證照 -->
+                    <div class="lg:col-span-2" data-aos="fade-up">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center lg:text-left">🏆 專業證照加值</h3>
+                        <div class="space-y-4">
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                                <svg class="w-8 h-8 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <h4 class="font-bold">iPAS AI應用規劃師（初級）</h4>
+                                    <p class="text-sm text-gray-600">訓後可應檢</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                                <svg class="w-8 h-8 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <h4 class="font-bold">生成式AI能力認證</h4>
+                                    <p class="text-sm text-gray-600">提升專業認可度</p>
+                                </div>
+                            </div>
+                             <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                                <svg class="w-8 h-8 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <h4 class="font-bold">AI素養能力認證</h4>
+                                    <p class="text-sm text-gray-600">強化跨域競爭力</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 學習效益 -->
+                    <div class="lg:col-span-3" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center lg:text-left">🌟 學習效益與優勢</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="benefit-card bg-blue-50 p-6 rounded-xl">
+                                <h4 class="font-bold text-lg text-blue-800 mb-2">📊 實務技能提升</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>AI趨勢預測準確率達90%</li>
+                                    <li>庫存預測精準度提升20-50%</li>
+                                    <li>掌握成功零售商AI導入策略</li>
+                                </ul>
+                            </div>
+                            <div class="benefit-card bg-green-50 p-6 rounded-xl">
+                                <h4 class="font-bold text-lg text-green-800 mb-2">🚀 職涯發展機會</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                    <li>數位轉型專案經理</li>
+                                    <li>AI零售策略顧問</li>
+                                    <li>智慧商品企劃專員</li>
+                                    <li>數據驅動行銷經理</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 報名資訊 Section -->
+        <section id="register" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-black mb-4" data-aos="fade-up">🎯 把握時尚零售AI轉型浪潮</h2>
+                <p class="text-lg md:text-xl text-blue-200 mb-8" data-aos="fade-up" data-aos-delay="100">成為產業數位轉型領航者，提升職場價值，掌握未來競爭優勢！</p>
+                
+                <div class="max-w-4xl mx-auto bg-gray-700 p-8 rounded-2xl text-left grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">🔔 招生對象與條件</h3>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li>在職人員優先，歡迎時尚零售相關從業人員</li>
+                            <li>具相關工作經驗或對時尚零售產業有興趣</li>
+                            <li>基本電腦操作能力</li>
+                            <li>具備學習熱忱與積極態度</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">💪 課程核心優勢</h3>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li>42小時密集實務訓練</li>
+                            <li>國際品牌操盤專家親自授課</li>
+                            <li>零售數據分析實務經驗傳承</li>
+                            <li>立即可用的AI工具技能</li>
+                            <li>專業證照輔導</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#register-form" class="mt-10 inline-block bg-blue-500 text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                    立即報名卡位
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 AI時尚零售產業智慧應用人才培訓班. All Rights Reserved.</p>
+            <p class="mt-2">註：產業數據來源為勞動部雲嘉南分署委託產業需求分析調查報告，職涯發展依個人能力、市場狀況及企業需求而定。</p>
+        </div>
+    </footer>
+
+    <script>
+        // AOS (Animate on Scroll) Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const aosElements = document.querySelectorAll('[data-aos]');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('aos-animate');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            aosElements.forEach(el => observer.observe(el));
+        });
+
+        // Accordion
+        const accordionToggles = document.querySelectorAll('.accordion-toggle');
+        accordionToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg');
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Close other accordions
+                    document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+                    document.querySelectorAll('.accordion-toggle svg').forEach(i => i.style.transform = 'rotate(0deg)');
+                    
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const isDecimal = counter.hasAttribute('data-decimal');
+            
+            const updateCount = () => {
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    let newCount = count + inc;
+                    if(isDecimal) {
+                         counter.innerText = newCount.toFixed(1);
+                    } else {
+                         counter.innerText = Math.ceil(newCount);
+                    }
+                    setTimeout(updateCount, 10);
+                } else {
+                    if(isDecimal) {
+                        counter.innerText = target.toFixed(1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+            };
+            updateCount();
+        }
+
+        const counterObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    animateCounter(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    </script>
+
+</body>
+</html>
