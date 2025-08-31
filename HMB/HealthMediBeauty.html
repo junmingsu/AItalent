@@ -91,13 +91,12 @@
         .tab-content.active {
             display: block;
         }
-        /* 新增講師介紹卡片的樣式 */
         .lecturer-card {
             text-align: center;
         }
         .lecturer-photo {
-            width: 120px; /* 調整照片大小以適應5個一排的佈局 */
-            height: 120px; /* 調整照片大小以適應5個一排的佈局 */
+            width: 120px;
+            height: 120px;
             background-color: #e5e7eb;
             margin: 0 auto 1rem;
             border-radius: 50%;
@@ -114,6 +113,18 @@
         }
         .lecturer-photo:hover {
             transform: scale(1.05);
+        }
+        /* 課程架構 Accordion 樣式 */
+        .accordion-button .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-button.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -136,7 +147,7 @@
         <div class="container mx-auto px-6">
             <div class="flex justify-center items-center space-x-4 md:space-x-8 py-3 overflow-x-auto">
                 <a href="#uniqueness" class="text-gray-700 hover:text-blue-600 font-semibold whitespace-nowrap px-2 py-1">課程獨特性</a>
-                <a href="#positioning" class="text-gray-700 hover:text-blue-600 font-semibold whitespace-nowrap px-2 py-1">課程定位</a>
+                <a href="#curriculum" class="text-gray-700 hover:text-blue-600 font-semibold whitespace-nowrap px-2 py-1">課程架構</a>
                 <a href="#audience" class="text-gray-700 hover:text-blue-600 font-semibold whitespace-nowrap px-2 py-1">適合學員</a>
                 <a href="#career" class="text-gray-700 hover:text-blue-600 font-semibold whitespace-nowrap px-2 py-1">職涯發展</a>
                 <a href="#competency" class="text-gray-700 hover:text-blue-600 font-semibold whitespace-nowrap px-2 py-1">核心能力</a>
@@ -178,104 +189,86 @@
                 </div>
             </div>
             
-            <!-- ====== 修改後講師介紹區塊 ====== -->
             <div class="mt-16 fade-in">
-                <!-- 調整 grid 佈局，讓一排最多顯示五個 -->
+                <!-- ====== 新增講師標註說明 ====== -->
+                <div class="mb-10 text-center">
+                    <h3 class="inline-block bg-blue-100 text-blue-800 text-lg font-bold px-6 py-2 rounded-full">健康醫美領域講師群</h3>
+                </div>
+                <!-- ====== 區塊結束 ====== -->
+
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-10">
-                    <!-- Lecturer Card 1 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/賴儷恩博士.jpg');"></div>
                         <h4 class="font-bold text-lg mt-4 text-gray-800">賴儷恩 博士</h4>
                         <p class="text-gray-600 text-sm mt-1">
                             喬美醫美集團-董事長<br>
-                            國際抗衰老再生醫美學會-理事長<br>
-                           
+                            
                         </p>
                     </div>
-                    <!-- Lecturer Card 2 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/蔡豐州博士.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">蔡豐州博士(副教授)</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">蔡豐州 博士(副教授)</h4>
                         <p class="text-gray-600 text-sm mt-1">
                             雙和醫院-美容外科-主治醫師<br>
-                            北醫附醫整形外科-主任<br>
-                            
+                            北醫附醫整形外科-主任
                         </p>
                     </div>
-                    <!-- Lecturer Card 3 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/葉明功博士.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">葉明功博士</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">葉明功 博士</h4>
                         <p class="text-gray-600 text-sm mt-1">
                             精準生技公司 董事長<br>
-                            衛生福利部食藥署-署長(前)<br>
-                            
+                            衛生福利部食藥署-署長(前)
                         </p>
                     </div>
-                    <!-- Lecturer Card 4 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/戴念梓教授.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">戴念梓教授</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">戴念梓 教授</h4>
                         <p class="text-gray-600 text-sm mt-1">
                             三軍總醫院整形外科-主治醫師<br>
-                            國防醫學大學外科系-教授<br>
-
+                            國防醫學大學外科系-教授
                         </p>
                     </div>
-                    <!-- Lecturer Card 5 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/董久源教授.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">董久源教授</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">董久源 教授</h4>
                         <p class="text-gray-600 text-sm mt-1">
-                            來富可得生物科技 董事長<br>
-                            馬里蘭州立大學教授<br>
-                            北榮癌症基因體Lab主任
-
+                            來富可得生物科技-董事長<br>
+                            馬里蘭州立大學-教授
                         </p>
                     </div>
-                    <!-- Lecturer Card 6 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/虞希正博士.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">虞希正博士</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">虞希正 博士</h4>
                         <p class="text-gray-600 text-sm mt-1">
-                            喬美整形外科診所-醫師<br>
-                            <br>
-                            
+                            喬美整形外科診所-醫師
                         </p>
                     </div>
-                    <!-- Lecturer Card 7 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/陳位存秘書長.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">陳位存秘書長</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">陳位存 秘書長</h4>
                         <p class="text-gray-600 text-sm mt-1">
                             臺灣組織庫學會-秘書長<br>
-                            台寶生醫-總經理<br>
-                             
+                            台寶生醫-總經理
                         </p>
                     </div>
-                    <!-- Lecturer Card 8 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/楊友華博士.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">楊友華博士</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">楊友華 博士</h4>
                         <p class="text-gray-600 text-sm mt-1">
-                            台灣 陶聲洋防癌基金會 董事<br>
-                            台灣細胞免疫醫學會 理事暨創辦人<br>
-                            
+                            台灣 陶聲洋防癌基金會-董事<br>
+                            台灣細胞免疫醫學會-理事
                         </p>
                     </div>
-                    <!-- Lecturer Card 9 -->
                     <div class="lecturer-card">
                         <div class="lecturer-photo" style="background-image: url('./images/鄭漢中博士.jpg');"></div>
-                        <h4 class="font-bold text-lg mt-4 text-gray-800">鄭漢中博士</h4>
+                        <h4 class="font-bold text-lg mt-4 text-gray-800">鄭漢中 博士</h4>
                         <p class="text-gray-600 text-sm mt-1">
-                            台灣粒線體公司 董事長<br>
-                            <br>
-                            
+                            台灣粒線體公司-董事長
                         </p>
                     </div>
                 </div>
             </div>
-            <!-- ====== 區塊結束 ====== -->
         </section>
 
         <!-- Positioning Section -->
@@ -298,6 +291,143 @@
                 </div>
             </div>
         </section>
+
+        <!-- ====== 新增課程架構區塊 ====== -->
+        <section id="curriculum" class="mb-24 fade-in">
+            <h2 class="section-title text-blue-900">完整 <span class="text-blue-600">課程架構</span></h2>
+            <p class="section-subtitle">我們設計了三大模組，從產業知識到AI技術，再到職場軟實力，循序漸進地為您建立完整的專業能力。</p>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- Accordion Item 1 -->
+                <div class="accordion-item bg-white rounded-lg shadow-md">
+                    <button class="accordion-button flex justify-between items-center w-full p-6 text-left font-bold text-xl text-gray-800">
+                        <span>一、健康醫美專業課程</span>
+                        <span class="accordion-icon text-blue-600 text-3xl font-light">+</span>
+                    </button>
+                    <div class="accordion-content bg-gray-50">
+                        <div class="p-6 border-t border-gray-200 space-y-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold">1. 產業基礎與專業評估</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>健康醫美產業導論與趨勢</li>
+                                    <li>醫學美容與皮膚評估基礎</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">2. 健康醫美核心技術</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>功能醫學營養管理</li>
+                                    <li>分子營養與抗衰老管理</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">3. 健康醫美應用原理</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>健康管理與自然醫學</li>
+                                    <li>美學諮詢與評估概論</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">4. 健康醫美應用實務</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>醫學美容外科應用</li>
+                                    <li>整合方案設計與個案研討</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item bg-white rounded-lg shadow-md">
+                    <button class="accordion-button flex justify-between items-center w-full p-6 text-left font-bold text-xl text-gray-800">
+                        <span>二、AI智慧技術專業課程</span>
+                        <span class="accordion-icon text-blue-600 text-3xl font-light">+</span>
+                    </button>
+                    <div class="accordion-content bg-gray-50">
+                         <div class="p-6 border-t border-gray-200 space-y-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold">1. 生成式AI提示工程技術</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>生成式AI與提示工程技術核心及應用</li>
+                                    <li>生成式AI的倫理與風險管理</li>
+                                    <li>進行相關範例實務演練</li>
+                                </ul>
+                            </div>
+                             <div>
+                                <h4 class="font-semibold">2. 生成式AI於產業應用</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>生成式AI應用於數據分析</li>
+                                    <li>生成式AI驅動數位轉型的應用模式</li>
+                                    <li>RAG技術原理與應用</li>
+                                    <li>進行相關範例實務演練</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">3. AI程式設計原理與實務</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>學習程式設計觀念與方法</li>
+                                    <li>使用程式語言(例如:Python等)進行程式設計</li>
+                                    <li>進行相關範例實務演練</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">4. 人工智慧與機器學習原理與實務</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>學習人工智慧與機器學習的原理與開發方法</li>
+                                    <li>學習AI與機器學習應用方式與探討未來發展趨勢</li>
+                                    <li>進行相關範例實務演練</li>
+                                </ul>
+                            </div>
+                             <div>
+                                <h4 class="font-semibold">5. 大數據分析原理與實務</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>資料取得到模型建置，引導大數據分析基本操作</li>
+                                    <li>學習資料探勘的方法原理與應用方式</li>
+                                    <li>進行相關範例實務演練</li>
+                                </ul>
+                            </div>
+                             <div>
+                                <h4 class="font-semibold">6. AI影像辨識原理與實務</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>學習AI影像辨識的原理與方法</li>
+                                    <li>使用AI技術來進行影像的分析、分類、辨識和處理</li>
+                                    <li>進行實務應用與案例實作</li>
+                                </ul>
+                            </div>
+                             <div>
+                                <h4 class="font-semibold">7. 專題製作實務與成果發表</h4>
+                                <ul class="list-disc list-inside pl-4 mt-1 text-sm text-gray-600">
+                                    <li>兼顧理論與實務應用</li>
+                                    <li>特定主題專案-學習實作</li>
+                                    <li>自訂主題專案-設計開發</li>
+                                    <li>成果發表展示專題實作成果</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item bg-white rounded-lg shadow-md">
+                    <button class="accordion-button flex justify-between items-center w-full p-6 text-left font-bold text-xl text-gray-800">
+                        <span>三、一般課程</span>
+                        <span class="accordion-icon text-blue-600 text-3xl font-light">+</span>
+                    </button>
+                    <div class="accordion-content bg-gray-50">
+                        <div class="p-6 border-t border-gray-200">
+                            <ul class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li>就業市場趨分析及求職技巧</li>
+                                <li>人際溝通與性別平等</li>
+                                <li>職場道德與職場工作倫理和勞動法令</li>
+                                <li>履歷撰寫</li>
+                                <li>企業徵才活動</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== 區塊結束 ====== -->
 
         <!-- Audience Section -->
         <section id="audience" class="mb-24 fade-in">
@@ -565,7 +695,7 @@
         // Intersection Observer for fade-in animations
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = {
-            threshold: 0.2,
+            threshold: 0.1,
             rootMargin: "0px 0px -50px 0px"
         };
         const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
@@ -585,24 +715,19 @@
 
         // Animated counters
         const counters = document.querySelectorAll('.stat-number');
-        const speed = 200; // The lower the slower
-
+        const speed = 200; 
         const animateCounters = () => {
             counters.forEach(counter => {
                 const updateCount = () => {
                     const target = +counter.getAttribute('data-target');
                     const count = +counter.innerText;
-                    
-                    // 處理小數點
                     const isDecimal = String(target).includes('.');
                     let inc = target / speed;
                     if (isDecimal) {
-                         // 讓小數點的動畫更平滑
                          inc = Math.max(inc, 0.01);
                     } else {
                          inc = Math.ceil(inc);
                     }
-
                     if (count < target) {
                         let newCount = count + inc;
                         if(isDecimal) {
@@ -622,20 +747,33 @@
                 updateCount();
             });
         };
-        
         const statsSection = document.querySelector('#advantage');
         const statsObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Reset counters to 0 before starting animation
                     counters.forEach(c => c.innerText = '0');
                     animateCounters();
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.5 });
-        
-        statsObserver.observe(statsSection);
+        if(statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-button');
+        accordionItems.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                button.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+        });
 
     </script>
 
